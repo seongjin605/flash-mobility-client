@@ -1,20 +1,18 @@
 // styled-components.ts
-import * as styledComponents from 'styled-components/native';
+import * as styledComponents from 'styled-components';
+import { ThemedStyledComponentsModule } from 'styled-components';
 
 interface IThemeInterface {
-  primaryColor: string;
-  primaryColorInverted: string;
+  blueColor: string;
 }
 
 const {
   default: styled,
   css,
-  injectGolbal,
+  createGlobalStyle,
   keyFrames,
   ThemeProvider
-} = styledComponents as styledComponents.ReactNativeThemedStyledComponentsModule<
-  IThemeInterface
->;
+} = styledComponents as ThemedStyledComponentsModule<IThemeInterface>;
 
-export { css, injectGolbal, keyFrames, ThemeProvider };
+export { css, createGlobalStyle, keyFrames, ThemeProvider };
 export default styled;
