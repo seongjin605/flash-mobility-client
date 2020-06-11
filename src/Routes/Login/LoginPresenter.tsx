@@ -1,6 +1,7 @@
 import React from 'react';
 import bgImage from '../../images/bg.png';
-import { RouteComponentProps, Route } from 'react-router-dom';
+import Helmet from 'react-helmet';
+import { RouteComponentProps, Link } from 'react-router-dom';
 import styled from '../../typed-components';
 
 const Container = styled.div`
@@ -66,21 +67,28 @@ interface IProps extends RouteComponentProps<any> {}
 
 const OutHomePresenter: React.SFC<IProps> = () => (
   <Container>
+    <Helmet>
+      <title>Flash Mobility | Login</title>
+    </Helmet>
     <Header>
       <Logo>
         <Title>Flash Mobility</Title>
       </Logo>
     </Header>
     <Footer>
-      <PhoneLogin>
-        <Subtitle>Get moving with Flash Mobility</Subtitle>
-        <FakeInput>
-          🇰🇷 +82 <Grey>Enter your mobile number</Grey>
-        </FakeInput>
-      </PhoneLogin>
-      <SocialLogin>
-        <SocialLink>Or connect with social</SocialLink>
-      </SocialLogin>
+      <Link to="{/phone-login}">
+        <PhoneLogin>
+          <Subtitle>Get moving with Flash Mobility</Subtitle>
+          <FakeInput>
+            🇰🇷 +82 <Grey>Enter your mobile number</Grey>
+          </FakeInput>
+        </PhoneLogin>
+      </Link>
+      <Link to="{/social-login}">
+        <SocialLogin>
+          <SocialLink>Or connect with social</SocialLink>
+        </SocialLogin>
+      </Link>
     </Footer>
   </Container>
 );
