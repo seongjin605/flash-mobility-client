@@ -76,7 +76,7 @@ const OutHomePresenter: React.SFC<IProps> = () => (
       </Logo>
     </Header>
     <Footer>
-      <Link to="{/phone-login}">
+      <Link to="/phone-login">
         <PhoneLogin>
           <Subtitle>Get moving with Flash Mobility</Subtitle>
           <FakeInput>
@@ -87,7 +87,7 @@ const OutHomePresenter: React.SFC<IProps> = () => (
           </FakeInput>
         </PhoneLogin>
       </Link>
-      <Link to="{/social-login}">
+      <Link to="/social-login">
         <SocialLogin>
           <SocialLink>Or connect with social</SocialLink>
         </SocialLogin>
