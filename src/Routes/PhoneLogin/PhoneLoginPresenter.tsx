@@ -58,7 +58,7 @@ const PhoneLoginPresenter = () => (
     <Helmet>
       <title>Phone Login | Number</title>
     </Helmet>
-    <BackArrowExtended backTo={'/'} />
+    <BackArrowExtended backTo="/" />
     <Title>Enter your mobile number</Title>
     <CountrySelect>
       {countries.map((country, index) => (
