@@ -49,6 +49,7 @@ class PhoneLoginContainer extends React.Component<
       `${countryCode}${phoneNumber}`
     );
     if (isValid) {
+      // TODO: 폰 인증
       return;
     } else {
       toast.warn('올바른 핸드폰 번호를 입력해주세요.');
